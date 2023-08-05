@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "target": "ES6",
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "strictNullChecks": true,
+    "experimentalDecorators": true
+  },
+  "lib": ["es2015"],
+  "include": ["app/**/*"]
+}
