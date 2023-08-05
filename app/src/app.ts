@@ -1,15 +1,13 @@
-import express, { Request, Response } from "express";
+import express from "express";
 import db from "./config/db.js";
-
-const app = express();
-
-app.get("/", (req: Request, res: Response): void => {
-	res.send({ status: "UP" });
-});
+import routes from "./routes/index.js";
 
 db.on("error", console.log.bind(console, "Connection error"));
 db.once("open", () => {
 	console.log("The connection to the database was successful");
 });
+
+const app = express();
+routes(app);
 
 export default app;
