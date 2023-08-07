@@ -1,5 +1,5 @@
 import express, { Express, Request, Response } from "express";
-import commonUserRoutes from "./commonUserRoutes.js";
+import commonUserRoutes from "./userRoutes.js";
 
 const routes = (app: Express) => {
 	app.route("/").get((req: Request, res: Response): void => {

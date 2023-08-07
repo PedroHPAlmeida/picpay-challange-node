@@ -1,3 +1,3 @@
-import { CommonUserModel, ICommonUser } from "./CommonUser.js";
+import { UserModel, IUser } from "./User.js";
 
-export { CommonUserModel, ICommonUser };
+export { UserModel, IUser };

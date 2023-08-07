@@ -11,9 +11,3 @@ services:
       - MONGODB_USERNAME=app
       - MONGODB_PASSWORD=app
       - MONGODB_DATABASE=picpay_db
-    volumes:
-      - 'mongodb_data:/bitnami/mongodb'
-
-volumes:
-  mongodb_data:
-    driver: local

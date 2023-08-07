@@ -1,3 +1,3 @@
-import CommonUserService from "./CommonUserService.js";
+import UserService from "./UserService.js";
 
-export { CommonUserService };
+export { UserService };

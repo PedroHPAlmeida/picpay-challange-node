@@ -1,3 +1,3 @@
-import CommonUserController from "./CommonUserController.js";
+import UserController from "./UserController.js";
 
-export { CommonUserController };
+export { UserController };
