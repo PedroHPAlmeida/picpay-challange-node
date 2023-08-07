@@ -13,10 +13,19 @@ enum TypeUser {
     shopkeeper = "shopkeeper"
 }
 
+const typeUsersArray = [TypeUser.common, TypeUser.shopkeeper];
+
 const userSchema = new Schema<IUser>({
 	name: { type: String, required: true },
 	identificatioNumber: { type: String, required: true, unique: true },
-	typeUser: { type: String, required: true, enum: [TypeUser.common, TypeUser.shopkeeper] },
+	typeUser: {
+		type: String,
+		required: true,
+		enum: {
+			values: typeUsersArray,
+			message: `The value must be one of: [${typeUsersArray.join(", ")}]`
+		}
+	},
 	email: { type: String, required: true, unique: true },
 	password: { type: String, required: true }
 });
